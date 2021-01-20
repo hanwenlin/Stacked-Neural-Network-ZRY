@@ -1,6 +1,6 @@
 
-fp = open("C:\\Users\\79844\\Desktop\\数据\\train_data600\\病例标注\\result.txt","r",encoding='UTF-8-sig')
-fout = open('C:\\Users\\79844\\Desktop\\数据\\train_data600\\病例\\dic.txt', 'w',encoding='UTF-8-sig')
+fp = open(r'C:\Users\hanwenlinPersonal\Desktop\Stacked-Neural-Network-ZRY\data\result.txt',"r",encoding='UTF-8-sig')
+fout = open('dic3.txt', 'w',encoding='UTF-8-sig')
 str = []
 strs = []
 for line in fp.readlines():

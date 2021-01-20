@@ -1,8 +1,12 @@
 # coding=utf-8
 import jieba
+import os
 
-input_path = "F:\\数据\\train_data600\\RES.txt"
-output_path = "F:\\数据\\train_data600\\pos.txt"
+datapath = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath('__file__'))), 'data')
+
+input_path = os.path.join(datapath, 'pos.txt')
+output_path = os.path.join(datapath, 'RES.txt')
+# input_path 和 output_path相反的
 #stopwords_path = "C:\\Users\\79844\\Desktop\\数据\\train_data600\\病例\\stopwords2.txt"
 
 
@@ -24,11 +28,11 @@ with open(output_path, 'w', encoding='utf-8') as o:
         for line in f:
             #a = tokenizer(line.strip())
             #b=("".join(a))
-            s = line.replace('解剖部位','body')
-            s1 = s.replace('药物','cure')
-            s2 = s1.replace('症状描述','symp')
-            s3 = s2.replace('独立症状', 'dise')
-            s4 = s3.replace('手术', 'chec')
+            s = line.replace('body', '解剖部位')
+            s1 = s.replace('cure', '药物')
+            s2 = s1.replace('symp','症状描述')
+            s3 = s2.replace( 'dise', '独立症状')
+            s4 = s3.replace('chec', '手术' )
             #s5 = s4.replace('\t\t\t','\t')
             o.write(s4+'\n')
 

@@ -6,7 +6,7 @@ path = "F:\\数据\\train_data600\\病例标注\\" #文件夹目录
 files= os.listdir(path) #得到文件夹下的所有文件名称
 #def tokenizer(s,x,y):
 for file, line1 in zip(files, lines1):
-    f2 = open(path + "/" + file, 'r', encoding='UTF-8-sig');
+    f2 = open(path + "/" + file, 'r', encoding='UTF-8-sig')
     iter_f = iter(f2)
     lines2 = iter_f.readlines()
     line1 = line1.strip()
@@ -22,3 +22,4 @@ for file, line1 in zip(files, lines1):
         fout.write(line1[i])
     fout.write('\n')
 
+# 添加tag， 有tag那个开始位置，‘ ’； 结束位置 ‘/’+tag+' '

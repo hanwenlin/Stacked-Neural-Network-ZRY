@@ -23,3 +23,6 @@ if __name__ == '__main__':
     MergeTxt(filepath,outfile)
     time2 = time.time()
     print(u'总共耗时：' + str(time2 - time1) + 's')
+
+
+# 600条病例信息合并成一个文件
